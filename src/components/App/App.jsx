@@ -1,47 +1,46 @@
+// import Home from 'Pages/Home/Home';
+import { lazy } from 'react';
+import MovieDetails from '../../Pages/MovieDetails/MovieDetails';
 import { Route, Routes } from 'react-router-dom';
+import { Layout } from 'components/Layout/Layout';
+
+const Home = lazy(() => import('../../Pages/Home/Home'));
+// const SearchMovie = lazy(() => import('../pages/Search/Search'));
+// const MoviesDetails = lazy(() => import('../pages/MovieDetails/MoviesDetails'));
+// const Cast = lazy(() => import('./Cast/Cast'));
+// const Reviews = lazy(() => import('./Reviews/Reviews'));
+// const NotFound = lazy(() => import('../pages/NotFound'));
+
+// export const App = () => {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Layout />}>
+//         <Route index element={<Home />} />
+//         <Route path="/movies/:movieId" element={<MovieDetails />} />
+//         {/* <Route path="cast" element={ <Cast/> } />
+//           <Route path="reviews" element={ <Reviews />} /> */}
+//         <Route path="/movies" element={<div>WordSerch</div>} />
+//       </Route>
+//     </Routes>
+//   );
+// };
 
 export const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<div>Home</div>}></Route>
-        <Route
-          path="/movies"
-          element={
-            <div>
-              компонент Movies, страница поиска фильмов по ключевому слову.
-            </div>
-          }
-        ></Route>
-        <Route
-          path="/movies/:movieId"
-          element={
-            <div>
-              компонент MovieDetails, страница с детальной информацией о
-              кинофильме.
-            </div>
-          }
-        ></Route>
-        <Route
-          path="/movies/:movieId/cast"
-          element={
-            <div>
-              компонент Cast, информация о актерском составе. Рендерится на
-              странице MovieDetails.
-            </div>
-          }
-        ></Route>
-        <Route
-          path="/movies/:movieId/reviews"
-          element={
-            <div>
-              компонент Reviews, информация об обзорах. Рендерится на странице
-              MovieDetails.
-            </div>
-          }
-        ></Route>
-      </Routes>
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />}>
+          {/* <Route path="cast" element={<Cast />} /> */}
+          {/* <Route path="reviews" element={<Reviews />} /> */}
+        </Route>
+        {/* <Route path="movies" element={ <SearchMovie /> } /> */}
+        {/* <Route path="movies/:movieId" element={ <MoviesDetails /> } > */}
+        {/* <Route path="cast" element={ <Cast/> } /> */}
+        {/* <Route path="reviews" element={ <Reviews />} /> */}
+        {/* </Route> */}
+      </Route>
+      {/* <Route path='*' element={ <NotFound/>} /> */}
+    </Routes>
   );
 };
