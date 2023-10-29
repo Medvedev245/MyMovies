@@ -28,19 +28,4 @@ const Home = () => {
   );
 };
 
-// useEffect(() => {
-//   const result = async () => {
-//     try {
-//       const movies = await fetchMovies();
-
-// if (movies.length) {
-//   setMovieList(movies);
-// }
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-//   result();
-// }, []);
-
 export default Home;

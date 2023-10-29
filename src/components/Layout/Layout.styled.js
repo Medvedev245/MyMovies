@@ -1,20 +1,50 @@
 import styled from 'styled-components';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 20px;
+  height: 300vh;
+  position: relative;
+  padding: 70px 0;
+  background-color: var(--iq-body-bg);
 `;
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  width: 100%;
+  top: 0;
+  position: fixed;
+  /* background: var(--iq-title-text); */
+`;
 
 export const Navbar = styled.nav`
-  border: 1px solid black;
   width: 100%;
-  height: 40px;
+  height: 60px;
   display: flex;
+  gap: 5px;
   align-items: center;
   justify-content: space-around;
+`;
+
+export const Link = styled(NavLink)`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--iq-light-primary);
+  border-radius: 4px;
+  background: var(--iq-title-text);
+  &.active {
+    color: var(--iq-primary-hover);
+    /* background-color: var(--iq-body-BG); */
+  }
+
+  &:hover {
+    /* box-shadow: 0 0 20px var(--iq-primary); */
+    text-shadow: 0 0 2px var(--iq-primary);
+    color: var(--iq-primary);
+    transition: all 0.4s ease;
+  }
 `;
