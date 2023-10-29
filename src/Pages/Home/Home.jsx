@@ -1,4 +1,3 @@
-// import { useEffect } from "react";
 import { useEffect, useState } from 'react';
 import { fetchAllMovies } from '../../components/API';
 import { useLocation } from 'react-router-dom';

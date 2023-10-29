@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 const imgUrl = 'https://image.tmdb.org/t/p/w300';
 
 export const AllMovies = ({ elements, stateItem }) => {
-  console.log(elements, stateItem);
   return (
     <ul>
       {elements.map(element => {

@@ -1,41 +1,10 @@
-// export const SelectedMovie = ({
-//   SelectedMovie: { poster_path, title, vote_average, overview },
-//   genres,
-// }) => {
-//   return (
-//     <div>
-//       <p>hi</p>
-//     </div>
-//   );
-// return (
-//     <Routes>
-//       <Route path="/" element={ <Layout /> }>
-//         <Route index element={ <Home /> } />
-//         <Route path=":movieId" element={ <MoviesDetails /> }>
-//           <Route path="cast" element={ <Cast/> } />
-//           <Route path="reviews" element={ <Reviews />} />
-//         </Route>
-// <Route path="movies" element={ <SearchMovie /> } />
-// <Route path="movies/:movieId" element={ <MoviesDetails /> } >
-//           <Route path="cast" element={ <Cast/> } />
-//           <Route path="reviews" element={ <Reviews />} />
-//         </Route>
-//       </Route>
-//   <Route path='*' element={ <NotFound/>} />
-// </Routes>
-//   );
-
-// };
-
-export const SelectedMovie = ({ selecteMovie, genres }) => {
-  // export const SelectedMovie = props => {
+export const SelectedMovie = props => {
   const imgBaseUrl = 'https://image.tmdb.org/t/p/w400';
-  //   console.log(imgBaseUrl + selecteMovie.poster_path);
-  //   console.log(selecteMovie.poster_path);
+  console.log(props);
 
   return (
     <div>
-      <div>
+      {/* <div>
         <img
           src={imgBaseUrl + selecteMovie.poster_path}
           alt={selecteMovie.title}
@@ -52,10 +21,71 @@ export const SelectedMovie = ({ selecteMovie, genres }) => {
         </span>
         <span>Overview</span>
         <p>{selecteMovie.overview}</p>
-      </div>
+      </div> */}
       <div>
         <p>Additional Information</p>
       </div>
     </div>
   );
 };
+
+// import { Suspense } from 'react';
+// import { Outlet } from 'react-router-dom';
+// import {
+//   Wrapper,
+//   Img,
+//   WrapperDetails,
+//   Title,
+//   Description,
+//   AddInfoWrapper,
+//   AddInfoList,
+//   LinkInfo,
+// } from './SelectedMovie.styled';
+
+// export const SelectedMovie = ({
+//   items: { poster_path, title, vote_average, overview },
+//   genres,
+// }) => {
+//   const imgBaseUrl = 'https://image.tmdb.org/t/p/w400';
+
+//   return (
+//     <Wrapper>
+//       <WrapperDetails>
+//         <div>
+//           <Img src={imgBaseUrl + poster_path} alt={title} />
+//         </div>
+
+//         <div>
+//           <Title>{title}</Title>
+//           <Description>
+//             User score: {vote_average ? vote_average.toFixed(1) : 'N/A'}%
+//           </Description>
+//           <Title>Overview</Title>
+//           <Description>{overview}</Description>
+//           <Title>Genres</Title>
+//           <div>
+//             {genres.map(genre => {
+//               return <Description key={genre.id}>{genre.name}</Description>;
+//             })}
+//           </div>
+//         </div>
+//       </WrapperDetails>
+
+//       <AddInfoWrapper>
+//         <Title>Additional Information</Title>
+//         <AddInfoList>
+//           <li>
+//             <LinkInfo to="cast">Cast</LinkInfo>
+//           </li>
+//           <li>
+//             <LinkInfo to="reviews">Reviews</LinkInfo>
+//           </li>
+//         </AddInfoList>
+//       </AddInfoWrapper>
+
+//       <Suspense fallback={<div>Loadind...</div>}>
+//         <Outlet />
+//       </Suspense>
+//     </Wrapper>
+//   );
+// };
