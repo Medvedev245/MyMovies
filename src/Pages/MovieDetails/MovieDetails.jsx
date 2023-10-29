@@ -43,8 +43,10 @@ import { useParams, useLocation, Link } from 'react-router-dom';
 const MovieDetails = () => {
   const [selecteMovie, setselecteMovie] = useState();
   const [genres, setGenres] = useState([]);
+
   const { movieId } = useParams();
   const location = useLocation();
+  const backLinkLocation = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const result = async () => {
@@ -61,15 +63,11 @@ const MovieDetails = () => {
     result();
   }, [movieId]);
 
-  const prevLocation = useRef(location.state?.from);
-
   return (
     <>
       {selecteMovie && (
         <>
-          <Link to={prevLocation ? prevLocation : '/'} className="buttonLink">
-            Go back
-          </Link>
+          <Link to={backLinkLocation.current}>Go back</Link>
           <SelectedMovie movie={selecteMovie} genres={genres} />
         </>
       )}

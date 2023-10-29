@@ -1,29 +1,39 @@
-export const SelectedMovie = props => {
-  // const imgBaseUrl = 'https://image.tmdb.org/t/p/w400';
-  console.log(props);
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+export const SelectedMovie = ({
+  movie: { poster_path, title, vote_average, overview },
+  genres,
+}) => {
+  const imgBaseUrl = 'https://image.tmdb.org/t/p/w400';
 
   return (
     <div>
-      {/* <div>
-        <img
-          src={imgBaseUrl + selecteMovie.poster_path}
-          alt={selecteMovie.title}
-        />
+      <div>
+        <img src={imgBaseUrl + poster_path} alt={title} />
       </div>
       <div>
-        <p>{selecteMovie.title}</p>
+        <p>{title}</p>
         <span>
-          User score:{' '}
-          {selecteMovie.vote_average
-            ? selecteMovie.vote_average.toFixed(1)
-            : 'N/A'}
-          %
+          User score: {vote_average ? vote_average.toFixed(1) : 'N/A'}%
         </span>
-        <span>Overview</span>
-        <p>{selecteMovie.overview}</p>
-      </div> */}
+        <p>Overview</p>
+        <p>{overview}</p>
+      </div>
       <div>
         <p>Additional Information</p>
+        <ul>
+          <li>
+            <Link to="casts">casts</Link>
+          </li>
+          <li>
+            <Link to="reviews">reviews</Link>
+          </li>
+        </ul>
+        <Suspense fallback={<div>Loading</div>}>
+          <Outlet />
+        </Suspense>
       </div>
     </div>
   );
