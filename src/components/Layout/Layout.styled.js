@@ -12,7 +12,6 @@ export const Header = styled.header`
   width: 100%;
   top: 0;
   position: fixed;
-  /* background: var(--iq-title-text); */
 `;
 
 export const Navbar = styled.nav`
