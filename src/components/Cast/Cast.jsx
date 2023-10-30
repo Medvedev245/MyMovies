@@ -36,7 +36,6 @@ const Casts = () => {
           );
         })}
       </ul>
-      <div>hi</div>
     </div>
   );
 };
