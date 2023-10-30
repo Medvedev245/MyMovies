@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 300vh;
   position: relative;
   padding: 70px 0;
-  background-color: var(--iq-body-bg);
+  background-color: var(--iq-secondary);
 `;
 
 export const Header = styled.header`

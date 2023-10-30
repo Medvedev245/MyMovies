@@ -17,9 +17,6 @@ const SearchMovie = () => {
 
   const input = searchParams.get('searchQuery') ?? '';
 
-  console.log(totalPages);
-  console.log(setPage);
-
   useEffect(() => {
     if (!input) {
       setQueryResult([]);
@@ -45,7 +42,6 @@ const SearchMovie = () => {
       return alert('Sorry, please provide a search word');
     }
     setSearchParams({ searchQuery: query });
-    console.log('good');
   };
 
   const handleInputChange = e => {
