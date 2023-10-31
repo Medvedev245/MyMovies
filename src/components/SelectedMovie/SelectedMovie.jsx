@@ -11,7 +11,14 @@ export const SelectedMovie = ({
   return (
     <div>
       <div>
-        <img src={imgBaseUrl + poster_path} alt={title} />
+        <img
+          src={
+            poster_path
+              ? imgBaseUrl + poster_path
+              : 'https://www.shutterstock.com/image-vector/no-image-available-vector-illustration-260nw-744886198.jpg'
+          }
+          alt={title}
+        />
       </div>
       <div>
         <p>{title}</p>

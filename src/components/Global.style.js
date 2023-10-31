@@ -25,9 +25,9 @@ code {
   --iq-black: #000000;
   --iq-title-text: #23203c;
   --iq-body-text: #D1D0CF;
-  --iq-body-bg: #06121e;
+  --iq-body-bg: #06121e; // 1
   --iq-bg1: #0b1a2a;
-  --iq-body-BG: #0b1a2a;
+  --iq-body-BG: #0b1a2a; // 1
   --iq-gold: #E6C75F;
   --iq-black: #000000;
 }

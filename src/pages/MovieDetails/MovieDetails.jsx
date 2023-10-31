@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
 
 const MovieDetails = () => {
-  const [selecteMovie, setselecteMovie] = useState();
+  const [selecteMovie, setselecteMovie] = useState(null);
   const [genres, setGenres] = useState([]);
 
   const { movieId } = useParams();

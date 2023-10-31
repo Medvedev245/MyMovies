@@ -24,18 +24,29 @@ const Casts = () => {
 
   return (
     <div>
-      <ul>
-        {selectedCast.map(card => {
-          const { name, profile_path, character, credit_id } = card;
-          return (
-            <li key={credit_id}>
-              <img src={imgBaseUrl + profile_path} alt={name} />
-              <p>{name}</p>
-              <p>{character}</p>
-            </li>
-          );
-        })}
-      </ul>
+      {selectedCast.length ? (
+        <ul>
+          {selectedCast.map(card => {
+            const { name, profile_path, character, credit_id } = card;
+            return (
+              <li key={credit_id}>
+                <img
+                  src={
+                    profile_path
+                      ? imgBaseUrl + profile_path
+                      : 'https://www.shutterstock.com/image-vector/no-image-available-vector-illustration-260nw-744886198.jpg'
+                  }
+                  alt={name}
+                />
+                <p>{name}</p>
+                <p>{character}</p>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p>No Casts available</p>
+      )}
     </div>
   );
 };

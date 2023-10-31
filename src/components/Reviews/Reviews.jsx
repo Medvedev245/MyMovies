@@ -23,17 +23,21 @@ const Reviews = () => {
 
   return (
     <div>
-      <ul>
-        {review.map(reviewer => {
-          const { author, content, id } = reviewer;
-          return (
-            <li key={id}>
-              <p>{author}</p>
-              <p>{content}</p>
-            </li>
-          );
-        })}
-      </ul>
+      {review.length ? (
+        <ul>
+          {review.map(reviewer => {
+            const { author, content, id } = reviewer;
+            return (
+              <li key={id}>
+                <p>{author}</p>
+                <p>{content}</p>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p>No reviews available</p>
+      )}
     </div>
   );
 };

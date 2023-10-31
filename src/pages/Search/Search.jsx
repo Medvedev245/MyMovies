@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import { useEffect, useState } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { fetchByQuery } from '../../components/API';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 
@@ -12,8 +12,6 @@ const SearchMovie = () => {
   const [query, setQuery] = useState(searchParams.get('searchQuery') ?? '');
   const [totalPages, setTotalPages] = useState();
   const [page, setPage] = useState(1);
-
-  const location = useLocation();
 
   const input = searchParams.get('searchQuery') ?? '';
 
@@ -58,7 +56,7 @@ const SearchMovie = () => {
         inputData={query}
         onChange={handleInputChange}
       />
-      <MovieList items={queryResult} stateItem={{ from: location }} />
+      <MovieList items={queryResult} />
     </div>
   );
 };
