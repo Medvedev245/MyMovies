@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const Container = styled.div`
   height: 300vh;
   position: relative;
-  padding: 70px 0;
+  padding: 80px 0;
   background-color: var(--iq-secondary);
 `;
 
@@ -40,10 +40,15 @@ export const Link = styled(NavLink)`
     /* background-color: var(--iq-body-BG); */
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     /* box-shadow: 0 0 20px var(--iq-primary); */
     text-shadow: 0 0 2px var(--iq-primary);
     color: var(--iq-primary);
     transition: all 0.4s ease;
   }
+`;
+
+export const Main = styled.main`
+  padding: 0 40px;
 `;

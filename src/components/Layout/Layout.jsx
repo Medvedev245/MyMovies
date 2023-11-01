@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Container, Header, Navbar, Link } from './Layout.styled';
+import { Container, Header, Navbar, Link, Main } from './Layout.styled';
 
 export const Layout = () => {
   return (
@@ -12,11 +12,11 @@ export const Layout = () => {
         </Navbar>
       </Header>
 
-      <main>
+      <Main>
         <Suspense fallback={<div>Loading</div>}>
           <Outlet />
         </Suspense>
-      </main>
+      </Main>
     </Container>
   );
 };
