@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Item, List, Image, LinkFilm } from './AllMovies.styled';
 
 const imgUrl = 'https://image.tmdb.org/t/p/w300';
