@@ -4,15 +4,21 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 const API_KEY = '?api_key=5be1c9c05ef299ccfab1d8ad724f7561';
 
 // search all movies
-export const fetchAllMovies = async () => {
+export const fetchAllMovies = async page => {
+  // console.log(page);
   try {
-    const response = await axios.get(`/trending/movie/day${API_KEY}`, {
-      headers: {
-        accept: 'application/json',
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YmUxYzljMDVlZjI5OWNjZmFiMWQ4YWQ3MjRmNzU2MSIsInN1YiI6IjY1Mzc4OTQ2MWY3NDhiMDBhZTEyZTE2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.p_ieqSURgaK9kCC0WXwowgoFGd8OI5KgBv1Xli0uCL4',
-      },
-    });
+    const response = await axios.get(
+      `/trending/movie/day${API_KEY}1&page=${page}`,
+      {
+        headers: {
+          accept: 'application/json',
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YmUxYzljMDVlZjI5OWNjZmFiMWQ4YWQ3MjRmNzU2MSIsInN1YiI6IjY1Mzc4OTQ2MWY3NDhiMDBhZTEyZTE2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.p_ieqSURgaK9kCC0WXwowgoFGd8OI5KgBv1Xli0uCL4',
+        },
+      }
+    );
+    console.log(response.data.results);
+    console.log(response.data.results.id);
     return response.data.results;
   } catch (error) {
     console.log(error);

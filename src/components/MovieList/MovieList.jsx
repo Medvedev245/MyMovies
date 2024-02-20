@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 const MovieList = ({ items }) => {
   const location = useLocation();
   const imgBaseUrl = 'https://image.tmdb.org/t/p/w300';
-  console.log(items);
+  // console.log(items);
   return (
     <>
       <ul>

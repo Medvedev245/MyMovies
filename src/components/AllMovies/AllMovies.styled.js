@@ -19,6 +19,7 @@ export const List = styled.ul`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-evenly;
+  margin-bottom: 40px;
 `;
 
 export const Item = styled.li`

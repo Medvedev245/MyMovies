@@ -15,8 +15,8 @@ const SearchMovie = () => {
 
   const input = searchParams.get('searchQuery') ?? '';
 
-  console.log(totalPages); // для майбутнього розвитку проекту:)
-  console.log(setPage); //для майбутнього розвитку проекту:)
+  //console.log(totalPages); // для майбутнього розвитку проекту:)
+  //console.log(setPage); //для майбутнього розвитку проекту:)
 
   useEffect(() => {
     if (!input) {
