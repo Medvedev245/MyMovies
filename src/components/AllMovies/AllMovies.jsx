@@ -15,7 +15,6 @@ export const AllMovies = ({ elements }) => {
               <Image src={imgUrl + element.poster_path} alt={element.title} />
             </LinkFilm>
           </Item>
-          console.log('object');
         );
       })}
     </List>

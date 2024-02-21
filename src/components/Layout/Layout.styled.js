@@ -9,18 +9,28 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  width: 100%;
+  display: flex;
+  padding: 0 40px;
   top: 0;
   position: fixed;
+  height: 60px;
+  gap: 50px;
+  justify-content: space-evenly;
 `;
 
 export const Navbar = styled.nav`
   width: 100%;
   height: 60px;
   display: flex;
-  gap: 5px;
+  /* gap: 5px; */
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+`;
+
+export const LogoContaoneer = styled.div`
+  width: 100px;
+  /* height: 100px; */
+  /* background-color: red; */
 `;
 
 export const Link = styled(NavLink)`

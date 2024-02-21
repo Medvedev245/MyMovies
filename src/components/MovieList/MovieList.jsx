@@ -23,6 +23,7 @@ const MovieList = ({ items }) => {
                 />
                 {movie.original_title}
               </Link>
+              <div></div>
             </li>
           );
         })}

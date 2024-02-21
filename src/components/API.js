@@ -17,8 +17,6 @@ export const fetchAllMovies = async page => {
         },
       }
     );
-    console.log(response.data.results);
-    console.log(response.data.results.id);
     return response.data.results;
   } catch (error) {
     console.log(error);
