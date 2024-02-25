@@ -3,7 +3,7 @@ import { fetchAllMovies } from '../../components/API';
 import { AllMovies } from 'components/AllMovies/AllMovies';
 import { Title } from './Home.styled';
 import LoadMore from 'components/LoadMore/LoadMore';
-import { SearchBy } from 'components/SearchBy/SearchBy';
+import { Footer } from 'components/Footer/Footer';
 
 const Home = () => {
   const [moviesList, setMoviesList] = useState([]);
@@ -37,7 +37,6 @@ const Home = () => {
 
   return (
     <>
-      <SearchBy />
       <Title>Trending today</Title>
       <AllMovies elements={moviesList} />
       <LoadMore loadMore={handleLoadMore} onPageChange={handlePageCange} />

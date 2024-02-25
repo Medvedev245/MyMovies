@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container, Header, Navbar, Link, Main } from './Layout.styled';
 import { LogoComponent } from 'components/LogoComponent/LogoComponent';
+import { Footer } from 'components/Footer/Footer';
 
 export const Layout = () => {
   return (
@@ -10,7 +11,7 @@ export const Layout = () => {
         <LogoComponent />
         <Navbar>
           <Link to="/">Home page</Link>
-          <Link to="/movies">Find by category</Link>
+          <Link to="/movies">Find by Name</Link>
           <Link to="/about">About us</Link>
           <Link to="/contacts">Contacts</Link>
         </Navbar>
@@ -21,6 +22,7 @@ export const Layout = () => {
           <Outlet />
         </Suspense>
       </Main>
+      <Footer />
     </Container>
   );
 };

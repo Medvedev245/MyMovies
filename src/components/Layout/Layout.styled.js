@@ -2,23 +2,14 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  height: 300vh;
+  height: 100%;
   position: relative;
-  padding: 80px 0;
+  padding-top: 80px;
+  /* padding-bottom: 40px; */
 
-  background: -webkit-linear-gradient(
-    90deg,
-    #d8ecca,
-    #b5bbde,
-    #a9cba4
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    90deg,
-    #d8ecca,
-    #b5bbde,
-    #a9cba4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-color: var(--iq-secondary);
+  /* background: -webkit-linear-gradient(90deg, #d8ecca, #223186, #a9cba4); */
+  background: linear-gradient(90deg, #d8ecca, #82af95, #a9cba4);
+  /* background-color: var(--iq-secondary); */
 `;
 
 export const Header = styled.header`
@@ -27,7 +18,7 @@ export const Header = styled.header`
   padding: 0 40px;
   top: 0;
   position: fixed;
-  height: 75px;
+  height: 50px;
   background-color: var(--header);
   justify-content: space-evenly;
   align-items: center;
@@ -56,18 +47,20 @@ export const Link = styled(NavLink)`
   font-weight: 700;
   font-size: 24px;
   color: var(--iq-light-primary);
-  border-radius: 4px;
-  background: var(--iq-title-text);
+  border-radius: 20px;
+  /* background: var(--iq-title-text); */
+  background: radial-gradient(#0c582f, #b8d8e5);
+
   &.active {
-    color: var(--iq-primary-hover);
-    /* background-color: var(--iq-body-BG); */
+    color: #182363;
+    /* background-color: #182363 */
   }
 
   &:hover,
   &:focus {
     /* box-shadow: 0 0 20px var(--iq-primary); */
-    text-shadow: 0 0 2px var(--iq-primary);
-    color: var(--iq-primary);
+    text-shadow: 0 0 2px var(#182363);
+    color: #182363;
     transition: all 0.4s ease;
   }
 `;
