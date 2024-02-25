@@ -5,17 +5,32 @@ export const Container = styled.div`
   height: 300vh;
   position: relative;
   padding: 80px 0;
+
+  background: -webkit-linear-gradient(
+    90deg,
+    #d8ecca,
+    #b5bbde,
+    #a9cba4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    90deg,
+    #d8ecca,
+    #b5bbde,
+    #a9cba4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-color: var(--iq-secondary);
 `;
 
 export const Header = styled.header`
+  width: 100%;
   display: flex;
   padding: 0 40px;
   top: 0;
   position: fixed;
-  height: 60px;
-  gap: 50px;
+  height: 75px;
+  background-color: var(--header);
   justify-content: space-evenly;
+  align-items: center;
 `;
 
 export const Navbar = styled.nav`
@@ -24,18 +39,16 @@ export const Navbar = styled.nav`
   display: flex;
   /* gap: 5px; */
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
-export const LogoContaoneer = styled.div`
-  width: 100px;
-  /* height: 100px; */
-  /* background-color: red; */
-`;
+// export const LogoContaoneer = styled.div`
+//   width: 100px;
+// `;
 
 export const Link = styled(NavLink)`
-  width: 50%;
-  height: 100%;
+  width: 225px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -30,5 +30,6 @@ code {
   --iq-body-BG: #0b1a2a; // 1
   --iq-gold: #E6C75F;
   --iq-black: #000000;
+  --header: #aedae6;
 }
 `;

@@ -8,10 +8,11 @@ export const Layout = () => {
     <Container>
       <Header>
         <LogoComponent />
-
         <Navbar>
           <Link to="/">Home page</Link>
-          <Link to="/movies">Movie Search</Link>
+          <Link to="/movies">Find by category</Link>
+          <Link to="/about">About us</Link>
+          <Link to="/contacts">Contacts</Link>
         </Navbar>
       </Header>
 

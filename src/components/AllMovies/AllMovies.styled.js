@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Image = styled.img`
   width: 100%;
-  height: 100%;
+  margin-bottom: 20px;
 `;
 
 export const LinkFilm = styled(Link)`
@@ -24,9 +24,17 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   width: 300px;
-  height: 450px;
+  /* height: 450px; */
   list-style: none;
   border-radius: 10px;
   border: 3px solid #fff;
   overflow: hidden;
+`;
+
+export const ElementText = styled.div`
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 `;
