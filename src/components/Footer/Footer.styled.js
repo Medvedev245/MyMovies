@@ -31,6 +31,7 @@ export const SvgIcons = styled.svg`
     transition: all 0.4s ease;
     fill: #182363;
     background-color: #6b9caa;
+    cursor: pointer;
   }
 `;
 

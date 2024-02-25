@@ -24,7 +24,7 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   width: 300px;
-  /* height: 450px; */
+  background-color: #82c9cb;
   list-style: none;
   border-radius: 10px;
   border: 3px solid #fff;
