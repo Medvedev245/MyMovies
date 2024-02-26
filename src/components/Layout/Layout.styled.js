@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
+  min-height: 85vh;
   height: 100%;
   position: relative;
   padding-top: 80px;
