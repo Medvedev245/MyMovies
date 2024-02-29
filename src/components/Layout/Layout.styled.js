@@ -6,11 +6,7 @@ export const Container = styled.div`
   height: 100%;
   position: relative;
   padding-top: 80px;
-  /* padding-bottom: 40px; */
-
-  /* background: -webkit-linear-gradient(90deg, #d8ecca, #223186, #a9cba4); */
   background: linear-gradient(90deg, #d8ecca, #82af95, #a9cba4);
-  /* background-color: var(--iq-secondary); */
 `;
 
 export const Header = styled.header`
