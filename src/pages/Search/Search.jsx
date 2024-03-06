@@ -10,8 +10,8 @@ const SearchMovie = () => {
   const [queryResult, setQueryResult] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('searchQuery') ?? '');
-  const [totalPages, setTotalPages] = useState();
-  const [page, setPage] = useState(1);
+  // const [totalPages, setTotalPages] = useState();
+  // const [page, setPage] = useState(1);
 
   const input = searchParams.get('searchQuery') ?? '';
 
@@ -25,9 +25,9 @@ const SearchMovie = () => {
     }
     const result = async () => {
       try {
-        const result = await fetchByQuery(input, page);
+        // const result = await fetchByQuery(input, page);
         setQueryResult(result.results);
-        setTotalPages(result.total_pages);
+        // setTotalPages(result.total_pages);
       } catch (error) {
         console.log(error);
       }
