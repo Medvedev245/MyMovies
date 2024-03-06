@@ -10,6 +10,8 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(isLoading);
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
