@@ -10,13 +10,13 @@ const SearchMovie = () => {
   const [queryResult, setQueryResult] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('searchQuery') ?? '');
-  // const [totalPages, setTotalPages] = useState();
-  // const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState();
+  const [page, setPage] = useState(1);
 
   const input = searchParams.get('searchQuery') ?? '';
 
-  //console.log(totalPages); // для майбутнього розвитку проекту:)
-  //console.log(setPage); //для майбутнього розвитку проекту:)
+  console.log(totalPages); // для майбутнього розвитку проекту:)
+  console.log(setPage); //для майбутнього розвитку проекту:)
 
   useEffect(() => {
     if (!input) {
@@ -25,9 +25,9 @@ const SearchMovie = () => {
     }
     const result = async () => {
       try {
-        // const result = await fetchByQuery(input, page);
+        const result = await fetchByQuery(input, page);
         setQueryResult(result.results);
-        // setTotalPages(result.total_pages);
+        setTotalPages(result.total_pages);
       } catch (error) {
         console.log(error);
       }
