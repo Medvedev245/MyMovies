@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  min-height: 85vh;
   height: 100%;
   position: relative;
   padding-top: 80px;
   background: linear-gradient(90deg, #d8ecca, #82af95, #a9cba4);
+  @media screen and (max-width: 800px) {
+    /* padding-left: 10px;
+    padding-right: 10px; */
+  }
 `;
 
 export const Header = styled.header`
@@ -15,7 +18,7 @@ export const Header = styled.header`
   padding: 0 40px;
   top: 0;
   position: fixed;
-  height: 50px;
+  height: 60px;
   background-color: var(--header);
   justify-content: space-evenly;
   align-items: center;
@@ -25,9 +28,25 @@ export const Navbar = styled.nav`
   width: 100%;
   height: 60px;
   display: flex;
-  /* gap: 5px; */
   align-items: center;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 1439px) {
+    /* display: none; */
+  }
+
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 30px;
+  }
 `;
 
 // export const LogoContaoneer = styled.div`
@@ -50,18 +69,39 @@ export const Link = styled(NavLink)`
 
   &.active {
     color: #182363;
-    /* background-color: #182363 */
   }
 
   &:hover,
   &:focus {
-    /* box-shadow: 0 0 20px var(--iq-primary); */
     text-shadow: 0 0 2px var(#182363);
     color: #182363;
     transition: all 0.4s ease;
   }
+  @media screen and (max-width: 1439px) {
+    width: 110px;
+    height: 35px;
+    font-weight: 700;
+    font-size: 15px;
+  }
 `;
 
 export const Main = styled.main`
+  min-height: 85vh;
+  margin: auto;
   padding: 0 40px;
+  width: 1440px;
+
+  //Tablet
+  @media screen and (max-width: 1439px) {
+    width: 700px;
+  }
+
+  @media screen and (max-width: 800px) {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
