@@ -7,8 +7,8 @@ export const Container = styled.div`
   padding-top: 80px;
   background: linear-gradient(90deg, #d8ecca, #82af95, #a9cba4);
   @media screen and (max-width: 800px) {
-    /* padding-left: 10px;
-    padding-right: 10px; */
+    /* backdrop-filter: blur(5px); */
+    /* right: ${props => (props.isOpen ? '0' : '-50%')}; */
   }
 `;
 
@@ -25,26 +25,28 @@ export const Header = styled.header`
 `;
 
 export const Navbar = styled.nav`
+  display: flex;
   width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  transition: top 1.3s ease-in-out, right 1.3s ease-in-out;
 
   @media screen and (max-width: 1439px) {
     /* display: none; */
   }
 
   @media screen and (max-width: 800px) {
+    z-index: 10;
     position: absolute;
     width: 50%;
     height: 100vh;
     top: 0;
-    right: 0;
+    right: ${props => (props.isOpen ? '0' : '-50%')};
+
     background-color: red;
-    display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     gap: 30px;
   }
 `;

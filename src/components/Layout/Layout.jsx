@@ -5,6 +5,8 @@ import { LogoComponent } from 'components/LogoComponent/LogoComponent';
 import { Footer } from 'components/Footer/Footer';
 import { useState } from 'react';
 import { BurgerComponent } from 'components/BurgerComponent/BurgerComponent';
+import { Close } from 'components/Close/Close';
+import { BlurBackground } from 'components/BlurBackground/BlurBackground';
 
 export const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,15 +16,18 @@ export const Layout = () => {
   };
 
   return (
-    <Container>
+    <Container isOpen={isOpen}>
       <Header>
         <LogoComponent />
-        <BurgerComponent isActive={isOpen} onClick={() => setIsOpen(!isOpen)} />
-        <Navbar>
-          <Link to="/">Home page</Link>
-          <Link to="/movies">Find by Name</Link>
-          <Link to="/about">About us</Link>
-          <Link to="/contacts">Contacts</Link>
+        <BurgerComponent onClick={toggleMenu} />
+        <Navbar isOpen={isOpen}>
+          <>
+            <Link to="/">Home page</Link>
+            <Link to="/movies">Find by Name</Link>
+            <Link to="/about">About us</Link>
+            <Link to="/contacts">Contacts</Link>
+            <Close onClick={toggleMenu} />
+          </>
         </Navbar>
       </Header>
 
@@ -32,6 +37,7 @@ export const Layout = () => {
         </Suspense>
       </Main>
       <Footer />
+      {isOpen && <BlurBackground />}
     </Container>
   );
 };
