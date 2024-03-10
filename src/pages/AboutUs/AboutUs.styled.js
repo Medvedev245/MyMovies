@@ -25,6 +25,7 @@ export const SectionContainer = styled.div`
   justify-content: space-evenly;
   gap: 60px;
 
+  margin-bottom: 40px;
   @media screen and (max-width: 800px) {
   }
 `;
