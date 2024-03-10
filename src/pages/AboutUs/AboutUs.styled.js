@@ -4,7 +4,7 @@ export const AboutContainer = styled.div`
   width: 100%;
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    height: 150px;
+    height: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -12,7 +12,18 @@ export const AboutContainer = styled.div`
 
 export const Text = styled.h2`
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 50px 0;
+
+  @media screen and (max-width: 800px) {
+  }
+`;
+
+export const SectionContainer = styled.div`
+  /* width: 1440px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 60px;
 
   @media screen and (max-width: 800px) {
   }
@@ -20,22 +31,27 @@ export const Text = styled.h2`
 
 export const Section = styled.section`
   width: 600px;
-  height: 400px;
-  /* width: 1200;
-  height: 65px; */
-  /* padding: 0 40px;
-  background-color: var(--header); */
-
+  max-height: 435px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  gap: 15px;
   @media screen and (max-width: 800px) {
   }
 `;
 
-export const SectionContainer = styled.div`
-  width: 1440px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+export const SpanText = styled.span`
+  font-weight: 500;
+  font-size: 24px;
+`;
+
+export const Image = styled.img`
+  width: 600px;
+  height: 350px;
 
   @media screen and (max-width: 800px) {
+    width: 300px;
+    height: 200px;
   }
 `;

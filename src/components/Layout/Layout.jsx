@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Container, Header, Navbar, Link, Main, Button } from './Layout.styled';
+import { Container, Header, Navbar, Link, Main } from './Layout.styled';
 import { LogoComponent } from 'components/LogoComponent/LogoComponent';
 import { Footer } from 'components/Footer/Footer';
 import { useState } from 'react';
@@ -15,20 +15,31 @@ export const Layout = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Container isOpen={isOpen}>
       <Header>
         <LogoComponent />
         <BurgerComponent onClick={toggleMenu} />
         <Navbar isOpen={isOpen}>
-          <>
-            <Link to="/">Home page</Link>
-            <Link to="/movies">Find by Name</Link>
-            <Link to="/about">About us</Link>
-            <Link to="/contacts">Contacts</Link>
-            <Close onClick={toggleMenu} />
-          </>
+          <Link to="/" onClick={closeMenu}>
+            Home page
+          </Link>
+          <Link to="/movies" onClick={closeMenu}>
+            Find by Name
+          </Link>
+          <Link to="/about" onClick={closeMenu}>
+            About us
+          </Link>
+          <Link to="/contacts" onClick={closeMenu}>
+            Contacts
+          </Link>
+          <Close onClick={toggleMenu} />
         </Navbar>
+        {isOpen && <BlurBackground onClick={toggleMenu} />}
       </Header>
 
       <Main>
@@ -37,7 +48,6 @@ export const Layout = () => {
         </Suspense>
       </Main>
       <Footer />
-      {isOpen && <BlurBackground />}
     </Container>
   );
 };

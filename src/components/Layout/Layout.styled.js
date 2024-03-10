@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   position: relative;
   padding-top: 80px;
   background: linear-gradient(90deg, #d8ecca, #82af95, #a9cba4);
   @media screen and (max-width: 800px) {
-    /* backdrop-filter: blur(5px); */
-    /* right: ${props => (props.isOpen ? '0' : '-50%')}; */
+    height: 100%;
   }
 `;
 
@@ -25,7 +25,6 @@ export const Header = styled.header`
 `;
 
 export const Navbar = styled.nav`
-  display: flex;
   width: 100%;
   height: 60px;
   display: flex;
@@ -44,10 +43,11 @@ export const Navbar = styled.nav`
     height: 100vh;
     top: 0;
     right: ${props => (props.isOpen ? '0' : '-50%')};
-
-    background-color: red;
+    justify-content: flex-start;
+    background-color: #203f43;
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
+    padding-top: 90px;
   }
 `;
 
@@ -88,7 +88,7 @@ export const Link = styled(NavLink)`
 `;
 
 export const Main = styled.main`
-  min-height: 85vh;
+  min-height: 91vh;
   margin: auto;
   padding: 0 40px;
   width: 1440px;
