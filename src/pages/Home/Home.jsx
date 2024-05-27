@@ -9,8 +9,6 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(isLoading);
-
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -20,6 +18,7 @@ const Home = () => {
           setMoviesList(movies);
         }
       } catch (error) {
+        console.log(isLoading);
         console.log(error);
       }
       setIsLoading(false);

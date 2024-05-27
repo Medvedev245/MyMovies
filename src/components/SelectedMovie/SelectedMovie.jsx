@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Img, ImgComtainer, Container } from './SelectedMovie.styled';
 
 export const SelectedMovie = ({
   movie: { poster_path, title, vote_average, overview },
@@ -9,9 +10,9 @@ export const SelectedMovie = ({
   const imgBaseUrl = 'https://image.tmdb.org/t/p/w400';
 
   return (
-    <div>
-      <div>
-        <img
+    <Container>
+      <ImgComtainer>
+        <Img
           src={
             poster_path
               ? imgBaseUrl + poster_path
@@ -19,14 +20,14 @@ export const SelectedMovie = ({
           }
           alt={title}
         />
-      </div>
+      </ImgComtainer>
       <div>
-        <p>{title}</p>
-        <span>
+        <p style={{ marginBottom: '15px' }}>Name: {title}</p>
+        <span style={{ marginBottom: '15px', display: 'inline-block' }}>
           User score: {vote_average ? vote_average.toFixed(1) : 'N/A'}%
         </span>
-        <p>Overview</p>
-        <p>{overview}</p>
+        <p>Overview:</p>
+        <p style={{ marginBottom: '15px' }}>{overview}</p>
       </div>
       <div>
         <p>Additional Information</p>
@@ -42,6 +43,6 @@ export const SelectedMovie = ({
           <Outlet />
         </Suspense>
       </div>
-    </div>
+    </Container>
   );
 };

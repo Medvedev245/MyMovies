@@ -2,6 +2,7 @@ import { fetchOneMovie } from '../../components/API';
 import { SelectedMovie } from 'components/SelectedMovie/SelectedMovie';
 import { useEffect, useRef, useState } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
+import { LinkBack, Container } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [selecteMovie, setselecteMovie] = useState(null);
@@ -27,14 +28,16 @@ const MovieDetails = () => {
   }, [movieId]);
 
   return (
-    <>
+    <Container>
       {selecteMovie && (
-        <>
-          <Link to={backLinkLocation.current}>Go back</Link>
+        <div>
+          <LinkBack>
+            <Link to={backLinkLocation.current}>Go back</Link>
+          </LinkBack>
           <SelectedMovie movie={selecteMovie} genres={genres} />
-        </>
+        </div>
       )}
-    </>
+    </Container>
   );
 };
 
