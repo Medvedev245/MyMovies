@@ -1,7 +1,12 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Img, ImgComtainer, Container } from './SelectedMovie.styled';
+import {
+  Img,
+  ImgComtainer,
+  Container,
+  Description,
+} from './SelectedMovie.styled';
 
 export const SelectedMovie = ({
   movie: { poster_path, title, vote_average, overview },
@@ -21,14 +26,14 @@ export const SelectedMovie = ({
           alt={title}
         />
       </ImgComtainer>
-      <div>
-        <p style={{ marginBottom: '15px' }}>Name: {title}</p>
+      <Description>
+        <p style={{ marginBottom: '15px', width: '400px' }}>Name: {title}</p>
         <span style={{ marginBottom: '15px', display: 'inline-block' }}>
           User score: {vote_average ? vote_average.toFixed(1) : 'N/A'}%
         </span>
         <p>Overview:</p>
         <p style={{ marginBottom: '15px' }}>{overview}</p>
-      </div>
+      </Description>
       <div>
         <p>Additional Information</p>
         <ul>
