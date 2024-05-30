@@ -11,7 +11,7 @@ export const SearchBar = ({ onSubmit, inputData, queryString, onChange }) => {
           placeholder="Probably Comedy"
           autoComplete="off"
         />
-        <label htmlFor="movies">Enjoy</label>
+        <label htmlFor="movies"></label>
       </span>
       <button type="submit">Search</button>
     </form>
