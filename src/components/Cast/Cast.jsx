@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchCast } from '../API';
+import { CastsContainer, CastsElement, CastsList } from './Cast.styled';
 
 const Casts = () => {
   const [selectedCast, setSelectedCast] = useState([]);
@@ -23,13 +24,13 @@ const Casts = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <CastsContainer>
       {selectedCast.length ? (
-        <ul>
+        <CastsList>
           {selectedCast.map(card => {
             const { name, profile_path, character, credit_id } = card;
             return (
-              <li key={credit_id}>
+              <CastsElement key={credit_id}>
                 <img
                   src={
                     profile_path
@@ -40,14 +41,14 @@ const Casts = () => {
                 />
                 <p>{name}</p>
                 <p>{character}</p>
-              </li>
+              </CastsElement>
             );
           })}
-        </ul>
+        </CastsList>
       ) : (
         <p>No Casts available</p>
       )}
-    </div>
+    </CastsContainer>
   );
 };
 

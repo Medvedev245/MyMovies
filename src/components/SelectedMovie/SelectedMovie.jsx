@@ -7,6 +7,9 @@ import {
   Container,
   Description,
   Wrapper,
+  Paaragraf,
+  Score,
+  ListInfo,
 } from './SelectedMovie.styled';
 
 export const SelectedMovie = ({
@@ -29,24 +32,23 @@ export const SelectedMovie = ({
           />
         </ImgComtainer>
         <Description>
-          <p style={{ marginBottom: '15px' }}>Name: {title}</p>
-          <span style={{ marginBottom: '15px', display: 'inline-block' }}>
+          <Paaragraf>Name: {title}</Paaragraf>
+          <Score>
             User score: {vote_average ? vote_average.toFixed(1) : 'N/A'}%
-          </span>
+          </Score>
           <p>Overview:</p>
-          <p style={{ marginBottom: '15px' }}>{overview}</p>
+          <Paaragraf>{overview}</Paaragraf>
         </Description>
       </Wrapper>
       <div>
-        <p>Additional Information</p>
-        <ul>
+        <ListInfo>
           <li>
             <Link to="casts">casts</Link>
           </li>
           <li>
             <Link to="reviews">reviews</Link>
           </li>
-        </ul>
+        </ListInfo>
         <Suspense fallback={<div>Loading</div>}>
           <Outlet />
         </Suspense>
