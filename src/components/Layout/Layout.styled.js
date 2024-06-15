@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  /* height: 100vh; */
-  width: 100vw;
+  height: 100vh;
+  /* width: 100vw; */
   position: relative;
   padding-top: 80px;
   background: linear-gradient(90deg, #d8ecca, #82af95, #a9cba4);
@@ -91,7 +91,7 @@ export const Main = styled.main`
   min-height: 91vh;
   margin: auto;
   padding: 0 40px;
-  width: 1440px;
+  /* max-width: 1440px; */
 
   //Tablet
   @media screen and (max-width: 1439px) {
