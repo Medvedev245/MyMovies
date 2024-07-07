@@ -36,5 +36,6 @@ code {
   --iq-gold: #E6C75F;
   --iq-black: #000000;
   --header: #aedae6;
+  --bg-elemeent: #82c9cb;
 }
 `;

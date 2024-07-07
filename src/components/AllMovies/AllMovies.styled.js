@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 export const Image = styled.img`
   width: 100%;
   margin-bottom: 20px;
+  @media screen and (max-width: 800px) {
+    width: 70%;
+  }
 `;
 
 export const LinkFilm = styled(Link)`
@@ -24,7 +27,7 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   width: 300px;
-  background-color: #82c9cb;
+  background-color: var(--bg-elemeent);
   list-style: none;
   border-radius: 10px;
   border: 3px solid #fff;
