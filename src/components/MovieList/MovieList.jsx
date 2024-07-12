@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ListElement, ListMovie } from './MovieList.styled';
+import { ListElement, ListMovie, TextElement } from './MovieList.styled';
 
 const MovieList = ({ items }) => {
   const location = useLocation();
@@ -24,10 +24,10 @@ const MovieList = ({ items }) => {
                 />
                 {/* {movie.original_title} */}
               </Link>
-              <div>
+              <TextElement>
                 <span>{movie.title}</span>
                 <span>{movie.release_date}</span>
-              </div>
+              </TextElement>
             </ListElement>
           );
         })}
