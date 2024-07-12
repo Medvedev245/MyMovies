@@ -7,7 +7,6 @@ import {
 } from './Contacts.styled';
 import FormDialog from '../../components/SendMail/FormDialog.jsx';
 import MyComponent from 'components/CallCenter/CallCenter.jsx';
-console.log('object');
 const Contacts = () => {
   return (
     <>

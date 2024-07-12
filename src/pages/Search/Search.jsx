@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchByQuery } from '../../components/API';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
+import { ContainerSerch } from './Search.styled';
 
 const MovieList = lazy(() => import('../../components/MovieList/MovieList'));
 
@@ -51,11 +52,14 @@ const SearchMovie = () => {
 
   return (
     <div>
-      <SearchBar
-        onSubmit={handleSubmit}
-        inputData={query}
-        onChange={handleInputChange}
-      />
+      <ContainerSerch>
+        <SearchBar
+          onSubmit={handleSubmit}
+          inputData={query}
+          onChange={handleInputChange}
+        />
+      </ContainerSerch>
+
       <MovieList items={queryResult} />
     </div>
   );

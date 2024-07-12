@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { ListElement, ListMovie } from './MovieList.styled';
 
 const MovieList = ({ items }) => {
   const location = useLocation();
@@ -6,10 +7,10 @@ const MovieList = ({ items }) => {
   // console.log(items);
   return (
     <>
-      <ul>
+      <ListMovie>
         {items.map(movie => {
           return (
-            <li key={movie.id}>
+            <ListElement key={movie.id}>
               <Link to={`${movie.id}`} state={{ from: location }}>
                 <img
                   src={
@@ -21,13 +22,16 @@ const MovieList = ({ items }) => {
                   width={300}
                   height={450}
                 />
-                {movie.original_title}
+                {/* {movie.original_title} */}
               </Link>
-              <div></div>
-            </li>
+              <div>
+                <span>{movie.title}</span>
+                <span>{movie.release_date}</span>
+              </div>
+            </ListElement>
           );
         })}
-      </ul>
+      </ListMovie>
     </>
   );
 };
