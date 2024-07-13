@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { fetchByQuery } from '../../components/API';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 import { ContainerSerch } from './Search.styled';
+import { Empty } from '../../components/Empty/Empty.jsx';
 
 const MovieList = lazy(() => import('../../components/MovieList/MovieList'));
 
@@ -18,7 +19,6 @@ const SearchMovie = () => {
 
   console.log(totalPages); // для майбутнього розвитку проекту:)
   console.log(setPage); //для майбутнього розвитку проекту:)
-  console.log(typeof queryResult.length);
 
   useEffect(() => {
     if (!input) {
@@ -60,7 +60,11 @@ const SearchMovie = () => {
           onChange={handleInputChange}
         />
       </ContainerSerch>
-      {queryResult.length === 0 ? '1' : <MovieList items={queryResult} />}
+      {queryResult.length === 0 ? (
+        <Empty></Empty>
+      ) : (
+        <MovieList items={queryResult} />
+      )}
     </div>
   );
 };
