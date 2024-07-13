@@ -18,6 +18,7 @@ const SearchMovie = () => {
 
   console.log(totalPages); // для майбутнього розвитку проекту:)
   console.log(setPage); //для майбутнього розвитку проекту:)
+  console.log(typeof queryResult.length);
 
   useEffect(() => {
     if (!input) {
@@ -59,8 +60,7 @@ const SearchMovie = () => {
           onChange={handleInputChange}
         />
       </ContainerSerch>
-
-      <MovieList items={queryResult} />
+      {queryResult.length === 0 ? '1' : <MovieList items={queryResult} />}
     </div>
   );
 };

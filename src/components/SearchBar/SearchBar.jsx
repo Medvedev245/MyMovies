@@ -1,8 +1,10 @@
+import { InputWrap, SerchBtn, SpanWrap } from './SearchBar.styled';
+
 export const SearchBar = ({ onSubmit, inputData, queryString, onChange }) => {
   return (
-    <form onSubmit={onSubmit}>
+    <SpanWrap onSubmit={onSubmit}>
       <span>
-        <input
+        <InputWrap
           id="movies"
           type="text"
           name="search"
@@ -13,7 +15,7 @@ export const SearchBar = ({ onSubmit, inputData, queryString, onChange }) => {
         />
         <label htmlFor="movies"></label>
       </span>
-      <button type="submit">Search</button>
-    </form>
+      <SerchBtn type="submit">Search</SerchBtn>
+    </SpanWrap>
   );
 };
