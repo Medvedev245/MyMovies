@@ -9,7 +9,7 @@ import {
 export const Footer = () => {
   return (
     <FooterContainer>
-      <SpanFooter>&copy; 2024 MyMovies</SpanFooter>
+      <SpanFooter>&copy; 2024 MyMovies. Created by Ihor Medvediev</SpanFooter>
       <WrapperComtainer>
         <div>
           <SvgIcons>
