@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/MyMovies/static/css/main.cd2e038f.css",
-    "main.js": "/MyMovies/static/js/main.ff001892.js",
+    "main.js": "/MyMovies/static/js/main.073bbaf6.js",
     "static/js/989.21660cd1.chunk.js": "/MyMovies/static/js/989.21660cd1.chunk.js",
     "static/js/890.89fa043b.chunk.js": "/MyMovies/static/js/890.89fa043b.chunk.js",
     "static/js/530.05e3023e.chunk.js": "/MyMovies/static/js/530.05e3023e.chunk.js",
-    "static/js/448.ca3c1278.chunk.js": "/MyMovies/static/js/448.ca3c1278.chunk.js",
+    "static/js/448.25f6f367.chunk.js": "/MyMovies/static/js/448.25f6f367.chunk.js",
     "static/js/91.70240cf1.chunk.js": "/MyMovies/static/js/91.70240cf1.chunk.js",
     "static/js/387.41688e63.chunk.js": "/MyMovies/static/js/387.41688e63.chunk.js",
     "static/js/779.b906d1ce.chunk.js": "/MyMovies/static/js/779.b906d1ce.chunk.js",
@@ -17,11 +17,11 @@
     "static/media/our_team.jpg": "/MyMovies/static/media/our_team.66193932ae5d7c789c37.jpg",
     "index.html": "/MyMovies/index.html",
     "main.cd2e038f.css.map": "/MyMovies/static/css/main.cd2e038f.css.map",
-    "main.ff001892.js.map": "/MyMovies/static/js/main.ff001892.js.map",
+    "main.073bbaf6.js.map": "/MyMovies/static/js/main.073bbaf6.js.map",
     "989.21660cd1.chunk.js.map": "/MyMovies/static/js/989.21660cd1.chunk.js.map",
     "890.89fa043b.chunk.js.map": "/MyMovies/static/js/890.89fa043b.chunk.js.map",
     "530.05e3023e.chunk.js.map": "/MyMovies/static/js/530.05e3023e.chunk.js.map",
-    "448.ca3c1278.chunk.js.map": "/MyMovies/static/js/448.ca3c1278.chunk.js.map",
+    "448.25f6f367.chunk.js.map": "/MyMovies/static/js/448.25f6f367.chunk.js.map",
     "91.70240cf1.chunk.js.map": "/MyMovies/static/js/91.70240cf1.chunk.js.map",
     "387.41688e63.chunk.js.map": "/MyMovies/static/js/387.41688e63.chunk.js.map",
     "779.b906d1ce.chunk.js.map": "/MyMovies/static/js/779.b906d1ce.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.ff001892.js"
+    "static/js/main.073bbaf6.js"
   ]
 }
