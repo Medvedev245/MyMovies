@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchByQuery } from '../../components/API';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
-import { ContainerSerch } from './Search.styled';
+import { ContainerSerch, TextSerch } from './Search.styled';
 import { Empty } from '../../components/Empty/Empty.jsx';
 
 const MovieList = lazy(() => import('../../components/MovieList/MovieList'));
@@ -53,6 +53,7 @@ const SearchMovie = () => {
 
   return (
     <div>
+      <TextSerch>In this page you can find movie by category.</TextSerch>
       <ContainerSerch>
         <SearchBar
           onSubmit={handleSubmit}
